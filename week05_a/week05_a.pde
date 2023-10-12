@@ -28,5 +28,12 @@ void mousePressed(){
      ans=p;
    }
    }
- }
+ }else if(mouseButton==RIGHT){
+   for(int i=0;i<pt.size();i++){
+     PVector p = pt.get(i);
+     if(dist(p.x,p.y,mouseX,mouseY)<5){
+       pt.remove(i);
+     }
+   }
+}
 }
